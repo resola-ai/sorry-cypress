@@ -47,7 +47,7 @@ export const InstanceDetails: React.FC<{ instance: Instance }> = ({
               render: (test: InstanceTest) => {
                 if (test?.wallClockDuration) {
                   return (
-                    <Tooltip text={`Started at ${test.wallClockStartedAt}`}>
+                    <Tooltip text={`Started at ${test.wallClockStartedAt.toLocaleString('ja-JP-u-ca-japanese')}`}>
                       <Text>
                         {shortEnglishHumanizerWithMsIfNeeded(
                           test.wallClockDuration

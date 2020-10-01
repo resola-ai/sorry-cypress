@@ -91,7 +91,7 @@ export function RunDetails({
                 if (spec?.results?.stats?.wallClockDuration) {
                   return (
                     <Tooltip
-                      text={`Started at ${spec.results.stats.wallClockStartedAt}`}
+                      text={`Started at ${spec.results.stats.wallClockStartedAt.toLocaleString('ja-JP-u-ca-japanese')}`}
                     >
                       <Text>
                         {shortEnglishHumanizerWithMsIfNeeded(
@@ -102,7 +102,7 @@ export function RunDetails({
                   );
                 } else if (spec?.claimedAt) {
                   return (
-                    <Tooltip text={`Started at ${spec.claimedAt}`}>
+                    <Tooltip text={`Started at ${spec.claimedAt.toLocaleString('ja-JP-u-ca-japanese')}`}>
                       <Text>
                         <RenderOnInterval
                           live

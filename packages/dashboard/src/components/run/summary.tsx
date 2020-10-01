@@ -144,7 +144,7 @@ export function RunSummary({ run }: RunSummaryProps): React.ReactNode {
           <Cell xs={12} md={6}>
             <div>
               <Text>
-                Started At: {overall.wallClockStartedAt.toUTCString()}
+                Started At: {overall.wallClockStartedAt.toLocaleString('ja-JP-u-ca-japanese')}
               </Text>
             </div>
             <div>
